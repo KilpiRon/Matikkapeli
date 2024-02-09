@@ -31,3 +31,4 @@ document.querySelector("button").addEventListener("click",() => {
     randomizeNumbers()
     document.querySelector("input").value=""
 })
+
