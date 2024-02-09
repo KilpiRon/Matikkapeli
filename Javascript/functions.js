@@ -2,6 +2,8 @@
 
 let rand_num1 = 0
 let rand_num2 = 0
+let correctCount = 0
+let incorrectCount = 0
 
 const getRandomIntNumberInRange = (min,max) => {
     return Math.floor(Math.random() * max) + min;
@@ -24,9 +26,14 @@ document.querySelector("button").addEventListener("click",() => {
 
     if (answer === correctAnswer) {
         alert("Correct!")
+        correctCount++;
     } else {
         alert("Incorrect!")
+        incorrectCount++;
     }
+
+    document.querySelector("#correctCount").textContent = correctCount;
+    document.querySelector("#incorrectCount").textContent = incorrectCount;
 
     randomizeNumbers()
     document.querySelector("input").value=""
